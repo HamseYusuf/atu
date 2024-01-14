@@ -10,7 +10,7 @@ try {
 
     $conn->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
 
-    echo 'connection is made ';
+    //echo 'connection is made ';
 } catch(PDOException $e) {
     echo "connection failed " . $e->getMessage();
 }

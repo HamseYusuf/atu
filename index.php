@@ -8,21 +8,7 @@
     <?php
 
 
-            $id='';
-            $first_name='';
-            $last_name='';
       
-           if($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id= $_POST['id'];
-            $first_name= $_POST['first_name'];
-            $last_name = $_POST['last_name'];
-            
-            if(!empty($first_name) && !empty($last_name)) {
-
-            } else {
-                header('Location: form.php');
-            }
-           }
 
        
     ?>
@@ -39,6 +25,7 @@
                     <th>Name</th>
                     <th>email</th>
                     <th>address </th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -60,6 +47,10 @@
                                 <td> <?php echo  $student['name'];  ?></td>
                                 <td> <?php echo  $student['email'];  ?></td>
                                 <td> <?php echo  $student['address'];  ?></td>
+                                <td>
+                                  <a href="update.php?id=<?php echo $student['id'] ?>" class="btn btn-info btn-sm">Update </a>
+                                  <a href="delete.php?id=<?php echo $student['id'] ?>" class="btn btn-danger btn-sm">Delete </a>
+                                </td>
                             </tr>
                  <?php } ?>
            
