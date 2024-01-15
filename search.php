@@ -2,7 +2,7 @@
    <?php include('base.php');
         include('header.php');
         include('db.php');
-
+       
         if($_SERVER['REQUEST_METHOD'] == 'GET') {
             $query = $_GET['query'];
             if(empty($query)) {

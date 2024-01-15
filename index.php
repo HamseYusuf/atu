@@ -2,6 +2,7 @@
    <?php include('base.php');
         include('header.php');
         include('db.php');
+      
    ?>
     <body>
 
