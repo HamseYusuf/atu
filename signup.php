@@ -15,9 +15,9 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(":username" , $username);
         $stmt->bindParam(":email" , $email); 
-        $stmt->bindParam(":password",password_hash($password , PASSWORD_DEFAULT));
+        $stmt->bindParam(":password",$password);
         $stmt->execute();
-        header("Location: index.php");
+        header("Location: login.php");
     }
 }
 
@@ -37,6 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == 'POST') {
                 <input type="password" class="form-control" placeholder="Type New Passowrd" name="password">
                 <button class="btn btn-info mt-2 " type="submit">Sing up </button>
             </form>
+            <a href="login.php"> login </a>
          </div>
         </div>
     </div>

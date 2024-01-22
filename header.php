@@ -9,6 +9,9 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php">Students</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php">logout</a>
+        </li>
       </ul>
    <form action="search.php" method="get"> 
     <input type="text" name="query" placeholder="search by name">
